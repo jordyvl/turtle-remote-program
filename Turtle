@@ -1,0 +1,35 @@
+rednet.open("right")
+while true do
+id, msg = rednet.receive()
+if msg == "forward" then
+  turtle.forward()
+elseif msg == "back" then
+  turtle.back()
+elseif msg == "left" then
+  turtle.turnLeft()
+elseif msg == "right" then
+  turtle.turnRight()
+elseif msg == "place" then
+  turtle.place()
+elseif msg == "dig" then
+  turtle.dig()
+elseif msg == "up" then
+  turtle.up()
+elseif msg == "down" then
+  turtle.down()
+elseif msg == "refuel" then
+  turtle.refuel()
+elseif msg == "redstone" then
+  redstone.setOutput("front",true)
+  sleep(1.5)
+  redstone.setOutput("front",false)
+elseif msg == "digup" then
+  turtle.digUp()
+elseif msg == "digdown" then
+  turtle.digDown()
+elseif msg == "placeup" then
+  turtle.placeUp()
+elseif msg == "placedown" then
+  turtle.placeDown()
+end
+end
